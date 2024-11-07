@@ -14,6 +14,8 @@ import IRRCalculator from './components/IRRCalculator';
 import NPVCalculator from './components/NPVCalculator';
 import MIRRCalculator from './components/MIRRCalculator';
 import EMCalculator from './components/EMCalculator';
+import ASCalculator from './components/ASCalculator';
+import DCFCalculator from './components/DCFCalculator';
 
 function App() {
   return (
@@ -33,6 +35,8 @@ function App() {
       <NPVCalculator/>
       <MIRRCalculator/>
       <EMCalculator/>
+      <ASCalculator/>
+      <DCFCalculator/>
     </div>
   );
 }
