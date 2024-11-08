@@ -1,43 +1,19 @@
 import React from 'react';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import Home from './Home';
 import './App.css';
-import LTVCalculator from './components/LTVCalculator';
-import MortgageCalculator from './components/MortgageCalculator';
-import CapRateCalculator from './components/CapRateCalculator';
-import CashOnCashCalculator from './components/CashOnCashCalculator';
-import GRMCalculator from './components/GRMCalculator';
-import DSCRCalculator from './components/DSCRCalculator';
-import ROICalculator from './components/ROICalculator';
-import OERCalculator from './components/OERCalculator';
-import BERCalculator from './components/BERCalculator';
-import PICalculator from './components/PICalculator';
-import IRRCalculator from './components/IRRCalculator';
-import NPVCalculator from './components/NPVCalculator';
-import MIRRCalculator from './components/MIRRCalculator';
-import EMCalculator from './components/EMCalculator';
-import ASCalculator from './components/ASCalculator';
-import DCFCalculator from './components/DCFCalculator';
+import LTVCalculatorPage from './calculators/LTVCalculatorPage';
+import MortgageCalculatorPage from './calculators/MortgageCalculatorpage';
 
 function App() {
   return (
-    <div className="App">
-      <h1>Real Estate Calculator App</h1>
-      <LTVCalculator />
-      <MortgageCalculator />
-      <CapRateCalculator />
-      <CashOnCashCalculator/>
-      <GRMCalculator/>
-      <DSCRCalculator/>
-      <ROICalculator/>
-      <OERCalculator/>
-      <BERCalculator/>
-      <PICalculator/>
-      <IRRCalculator/>
-      <NPVCalculator/>
-      <MIRRCalculator/>
-      <EMCalculator/>
-      <ASCalculator/>
-      <DCFCalculator/>
-    </div>
+    <Router>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/LTV-Calculator" element={<LTVCalculatorPage />} />
+      <Route path="/Mortgage-Calculator" element={<MortgageCalculatorPage />} />
+    </Routes>
+  </Router>
   );
 }
 
